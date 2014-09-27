@@ -1,0 +1,521 @@
+// Normally mainpage styles 
+//+font('Conv_SegoePrintRegular', 'SegoePrintRegular')
+
+
+
+
+header
+  +clr
+  height: 108px
+  position: fixed
+  width: 100%
+  top: 0
+  bottom: auto
+  z-index: 999
+  background: #ffffff
+  +background-size(cover)
+
+
+
+  nav
+    @extend %in
+    padding-top: 35px
+    +clr
+    .logo
+      float: left
+      margin-right: 70px
+      margin-top: -20px
+
+    ul
+      float: left
+      font-size: 21px
+      display: inline-block
+      color: #282828
+      font-family: 'clear_sansregular'
+      li
+        display: inline-block
+        margin-right: 10px
+        padding-right: 15px
+        line-height: 1.2em
+        border-right: 1px solid #ebebeb
+        &:last-child
+          margin-right: 0
+          border-right: none
+        a
+          color: inherit
+          text-decoration: none
+          &:hover
+            color: #1e89db
+
+          &.is-active
+            color: #1e89db
+
+
+    .menu_contacts
+      float: right
+      width: 230px
+      line-height: 1.4em
+    .menu_phone
+      font-size: 27px
+      display: inline-block
+      float: right
+      position: relative
+      color: #282828
+      +intro
+
+    .menu_callMe
+      float: right
+      font-size: 16px
+      color: #282828
+      text-decoration: none
+      border-bottom: dotted 1px
+      font-family: 'neristhin'
+      &:hover
+        border-bottom: none
+
+.intro
+  background: url(../img/intro_bg.jpg)
+  +cover
+  height: 691px
+  margin-top: 108px
+  position: relative
+  +clr
+  +box
+  &__border-top
+    position: absolute
+    height: 0
+    border-top: 9px solid #1d89db
+    top: 0
+    width: 100%
+    left: 0
+    z-index: 1
+  &__border-bottom
+    position: absolute
+    height: 0
+    border-top: 9px solid #6bd3a7
+    bottom: 0
+    width: 100%
+    left: 0
+    z-index: 1
+  .intro_in
+    @extend %in
+
+  &__text
+    width: 480px
+    float: left
+    padding-top: 60px
+    h1
+      font-size: 55px
+      color: #ffffff
+      line-height: 1em
+      +intro
+    h2
+      color: #ffffff
+      font-size: 21.6px
+      text-transform: uppercase
+      font-family: 'jurademibold'
+      margin-top: 10px
+    ul
+      font-size: 20px
+      color: #ffffff
+      line-height: 1em
+      margin-top: 60px
+      li
+        width: 265px
+        position: relative
+        margin-left: 80px
+        border-bottom: 1px solid rgba(#fff, .31)
+        padding-bottom: 20px
+        padding-top: 15px
+        +csb
+        &:before
+          position: absolute
+          content: ""
+          top: 13px
+          left: -80px
+          +s(check)
+        &:last-child
+          border-bottom: none
+  &__form
+    position: relative
+    float: right
+    background: url(../img/form_bg.png)
+    width: 447px
+    height: 724px
+    z-index: 0
+    .form__img
+      width: 507px
+      height: 454px
+      margin-top: -60px
+      margin-left: -50px
+    .form__price
+      position: absolute
+      background: url(../img/price_bg.png) no-repeat
+      height: 104px
+      width: 104px
+      text-align: center
+      top: 40px
+      right: 60px
+      +intro
+      font-size: 18px
+      +box
+      padding-top: 15px
+      line-height: 1.4em
+      color: #ffffff
+      span
+        font-size: 29.6px
+
+
+
+
+.about
+  margin-top: 40px
+  +clr
+  .about_in
+    @extend %in
+    +clr
+  .about__img
+    float: left
+    margin-left: -30px
+    +clr
+  .about__text
+    margin-top: 70px
+    float: right
+    font-size: 16px
+    color: #4e4c4a
+    width: 560px
+    +cs
+    +clr
+    p
+      margin-bottom: 10px
+    span
+      +cs
+      font-size: 32px
+      line-height: 1em
+  .about__bottom
+    +clr
+    padding-top: 10px
+    clear: both
+
+
+.features
+  padding-top: 50px
+  .features_in
+    margin-top: 70px
+    @extend %in
+    +clr
+  .title--main
+    font-size: 45px
+    position: relative
+    display: inline-block
+    left: 50%
+    color: #4e4c4a
+    +transform(translate(-50%))
+    &:before
+      position: absolute
+      content: ""
+      +s(title_left)
+      top: 15px
+      left: -60px
+    &:after
+      position: absolute
+      content: ""
+      +s(title_right)
+      top: 15px
+      right: -60px
+  .items
+    +clr
+    float: left
+    width: 260px
+    text-align: right
+    color: #4e4c4a
+    margin-left: 60px
+    .item
+      position: relative
+      margin-bottom: 60px
+      &:after
+        position: absolute
+        content: ""
+        +s(ltop)
+        top: 45px
+        right: -100px
+      h3
+        +cs
+        font-size: 20px
+        margin-bottom: 5px
+      h4
+        +cs
+        font-size: 15px
+      &.item--center
+        margin-right: 35px
+        &:after
+          position: absolute
+          content: ""
+          +s(lcenter)
+          top: 55px
+          right: -85px
+      &.item--bottom
+        &:after
+          position: absolute
+          content: ""
+          +s(lbottom)
+          top: 10px
+          right: -105px
+
+  .items--right
+    +clr
+    float: right
+    text-align: left
+    margin-left: 0
+    margin-right: 10px
+    width: 290px
+    .item--wide
+      margin-bottom: 35px
+
+
+    .item
+      &:after
+        left: -100px
+        top: 30px
+        +s(rtop)
+      &.item--center
+        margin-right: 0 !important
+        margin-left: 35px
+        &:after
+          +s(rcenter)
+          left: -80px
+      &.item--bottom
+        &:after
+          top: -13px
+          left: -105px
+          +s(rbottom)
+  .feature__watch
+    margin-top: 100px
+    float: left
+    margin-left: 65px
+
+.buy
+  background: url(../img/buy_bg.jpg) center no-repeat
+  +background-size(cover)
+  height: 754px
+  +clr
+  .buy_in
+    @extend %in
+    padding-top: 140px
+    +clr
+  .buy__item
+    width: 308px
+    height: 516px
+    +box
+    +border-radius(5px)
+    background: #ffffff
+    display: inline-block
+    margin-right: 30px
+    vertical-align: top
+    +box-shadow(0 22px 40px -22px #000000)
+    &:last-child
+      margin-right: 0
+    .buy__img
+      position: relative
+      width: 231px
+      height: 231px
+      margin: 0 auto
+      top: -60px
+      img
+        +border-radius(50%)
+        width: 100%
+        height: 231px
+    .item__caption
+      width: 270px
+      display: table
+      margin: -40px auto 0
+      +clr
+      .item__caption--left
+        +clr
+        float: left
+        text-align: right
+        width: 120px
+        line-height: 1.1em
+        +cs
+        font-size: 20px
+      .item__caption--right
+        +clr
+        float: left
+        margin-left: 20px
+      .item__caption--right-top
+        position: relative
+        +cs
+        font-size: 19px
+        color: #b4afab
+        +clr
+
+        &:before
+          position: absolute
+          content: ""
+          border-bottom: 1px solid
+          height: 0
+          left: -2px
+          top: 14px
+          right: 48px
+        span
+          font-size: 14px
+          +cs
+      .item__caption--right-bottom
+        +cs
+        font-size: 32px
+        color: #7c9d67
+        +clr
+        span
+          font-size: 20px
+      .item__caption__nomenclature
+        color: #c7c7c7
+        font-size: 13px
+        clear: both
+        text-align: center
+        margin-top: 75px
+      .item__caption__border
+        display: table
+        margin: 0 auto
+
+    .item__form
+      @extend .form
+      width: 262px
+
+.why
+  padding-top: 95px
+  +box
+  +clr
+  .why_in
+    @extend %in
+    +clr
+  .title--main
+    font-size: 45px
+    position: relative
+    display: inline-block
+    left: 50%
+    color: #4e4c4a
+    +transform(translate(-50%))
+    margin-bottom: 45px
+    &:before
+      position: absolute
+      content: ""
+      +s(title_left)
+      top: 15px
+      left: -60px
+    &:after
+      position: absolute
+      content: ""
+      +s(title_right)
+      top: 15px
+      right: -60px
+  .why__item
+    width: 290px
+    display: inline-block
+    text-align: center
+    vertical-align: top
+    margin-right: 60px
+    &:last-child
+      margin-right: 0
+    .why__img
+      margin-bottom: 25px
+      width: 95px
+      height: 95px
+      +border-radius(50%)
+      background: #eef4eb
+      display: inline-block
+      .vertical-centered
+        display: inline-block
+        height: 100%
+        vertical-align: middle
+      img
+        vertical-align: middle
+
+    h3
+      +cs
+      font-size: 20px
+      color: #4e4c4a
+      margin-bottom: 10px
+    p
+      +cs
+      font-size: 15px
+      color: #4e4c4a
+
+
+
+
+
+
+
+footer
+  +box
+  padding-top: 24px
+  height: 107px
+  background: url(../img/footer_bg.png) center no-repeat
+  +background-size(cover)
+  .footer_in
+    @extend %in
+
+.callback
+  background: #fff
+  width: 308px
+  height: 307px
+  +border-radius(5px)
+  text-align: center
+  .form__border
+    margin-bottom: 20px
+  h2
+    padding-top: 20px
+    padding-bottom: 5px
+    font-size: 35px
+    color: #4e4c4a
+  form
+    input
+      margin-bottom: 10px
+    button
+      margin-top: 20px !important
+.orderNow
+  height: 356px
+
+
+.thanks
+  text-align: center
+  width: 445px
+  height: 282px
+
+  .thanks__top
+    background: transparent
+    height: 45px
+  .thanks__main
+    height: 237px
+    background: #ffffff
+    +border-radius(5px)
+  .thanks__img
+    position: relative
+    +border-radius(50%)
+    +background-clip(padding-box)
+    background-color: #8fb377
+    width: 90px
+    height: 90px
+    display: inline-block
+    top: -45px
+    .vertical-centered
+      height: 100%
+      vertical-align: middle
+      display: inline-block
+    img
+      vertical-align: middle
+  h2
+    font-size: 49px
+    line-height: 1em
+    color: #4e4c4a
+    margin-top: -20px
+
+  h3
+    font-size: 29px
+    line-height: 1em
+    color: #4e4c4a
+    margin-bottom: 20px
+  p
+    +cs
+    font-size: 16px
+    color: #5a5242
