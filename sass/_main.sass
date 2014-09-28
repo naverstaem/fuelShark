@@ -169,33 +169,66 @@ header
 
 
 .about
-  margin-top: 40px
+  margin-top: 120px
   +clr
   .about_in
     @extend %in
     +clr
   .about__img
     float: left
-    margin-left: -30px
+    width: 397px
+    height: 397px
+    +border-radius(50%)
     +clr
+    img
+      display: block
+  h2
+    text-align: left
+    margin-bottom: 10px
   .about__text
-    margin-top: 70px
     float: right
-    font-size: 16px
-    color: #4e4c4a
-    width: 560px
+    font-size: 18px
+    color: #333333
+    width: 520px
     +cs
     +clr
     p
-      margin-bottom: 10px
-    span
-      +cs
-      font-size: 32px
-      line-height: 1em
-  .about__bottom
-    +clr
-    padding-top: 10px
-    clear: both
+      margin-bottom: 20px
+
+
+
+.functionality
+  .functionality_in
+    @extend %in
+  h3
+    margin-top: 15px
+    font-size: 20px
+    color: #1a1a1a
+    font-weight: normal
+    text-align: center
+    padding: 0 140px
+  &__item
+    margin-top: 40px
+    text-align: center
+    vertical-align: top
+    display: inline-block
+    width: 235px
+    +box
+    padding: 0 30px
+    border-right: 1px solid #dfdfdf
+    height: 150px
+    &:last-child
+      border-right: 0
+  &__img
+    display: inline-block
+    margin-bottom: 25px
+  p
+    +csb
+    font-size: 20px
+    color: #363636
+
+
+
 
 
 .features
