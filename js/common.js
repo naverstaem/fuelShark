@@ -32,13 +32,14 @@ head.ready(function() {
 //
 //    });
 
-    $('#form1').validate();
+    $('#form1 form').validate();
     $('#form2').validate();
     $('#form3').validate();
     $('#form4').validate();
-    $('#form5').validate();
+    $('#form5 form').validate();
+    $('#form6').validate();
 
-    $("#form1").ajaxForm({
+    $("#form1 form").ajaxForm({
         success: function () {
             $(".thanks-link").trigger('click');
         },
@@ -70,7 +71,15 @@ head.ready(function() {
             title: 'Спасибо!'
         }
     });
-    $("#form5").ajaxForm({
+    $("#form5 form").ajaxForm({
+        success: function () {
+            $(".thanks-link").trigger('click');
+        },
+        data: {
+            title: 'Спасибо!'
+        }
+    });
+    $("#form6").ajaxForm({
         success: function () {
             $(".thanks-link").trigger('click');
         },
@@ -85,7 +94,9 @@ head.ready(function() {
         padding: 0,
         helpers: {
             overlay: {
-                locked: false
+                locked: false,
+                css:{'background' : 'rgba(255,255,255, 0.94)'}
+
             }
         },
         tpl: {
@@ -100,15 +111,18 @@ head.ready(function() {
         padding: 0,
         helpers: {
             overlay: {
-                locked: false
+                locked: false,
+                css:{'background' : 'rgba(255,255,255, 0.94)'}
+
             }
         },
         tpl: {
-            closeBtn: '<div class="myFancyClose--thanks"></div>'
+            closeBtn: 'false'
         },
         beforeShow: function(){
             $(".fancybox-skin").css("backgroundColor","transparent");
             $(".fancybox-skin").css("boxShadow","none");
+            $('.fancybox-inner').css("border-radius", "50%");
         }
     });
 //////////////////////without close button

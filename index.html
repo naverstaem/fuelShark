@@ -413,51 +413,46 @@
 
 
 <footer>
-<div class="footer_in">
+    <nav>
+        <a href="#">
+            <div class="logo"><img src="img/logo.png" alt="logo"/></div>
+        </a>
+        <ul class="js-nav">
+            <li><a data-scroll href="#">О товаре</a></li>
+            <li><a data-scroll href="#">Гарантии</a></li>
+            <li><a data-scroll href="#">Оплата и доставка</a></li>
+            <li><a data-scroll href="#">Отзывы</a></li>
+        </ul>
+        <div class="menu_contacts">
 
-</div>
+            <div class="menu_phone">8 800 555 44 33</div>
+            <a class="menu_callMe fancybox" href="#callback">Заказать обратный звонок</a>
+
+        </div>
+    </nav>
 </footer>
 </div>
 </div>
 <!-- END out-->
 <div id = "callback" class="callback form" style="display:none;">
-    <h2 class="title">Заказать звонок</h2>
-    <div class="form__border"><img src="img/caption_border_img.jpg" alt="border"/></div>
+    <h2 class="title">обратный звонок</h2>
+    <h3>Введите контактные данные и наш менеджер свяжется
+        с вами в ближайшее время</h3>
     <form action="#" method="post" id="form6">
-        <input type="text" name="name" class="name required" placeholder="Ваше имя">
-        <input type="text" name="phone" class="phone required" placeholder="Ваш телефон">
-        <button class="btn button">Заказать товар!</button>
+        <input type="text" name="name" class="name required" placeholder="Введите имя">
+        <input type="text" name="phone" class="phone required" placeholder="Введите телефон">
+        <button class="btn button">отправить</button>
     </form>
 </div>
-<div id = "orderNow" class="orderNow callback form" style="display:none;">
-    <h2 class="title">Заказать товар</h2>
-    <div class="form__border"><img src="img/caption_border_img.jpg" alt="border"/></div>
-    <form action="#" method="post" id="form7">
-        <input type="text" name="name" class="name required" placeholder="Ваше имя">
-        <input type="text" name="phone" class="phone required" placeholder="Ваш телефон">
-        <select class="required">
-            <option value="" disabled selected>Цвет часов</option>
-            <option value="" disabled>-------------</option>
-            <option value="orange">Оранжевый</option>
-            <option value="blue">Синий</option>
-            <option value="green">Зеленый</option>
-        </select>
-        <button class="btn button">Заказать товар!</button>
-    </form>
-</div>
+
 <div id = "thanks" class="thanks" style="display: none;">
-    <div class="thanks__top"></div>
-    <div class="thanks__main">
         <div class="thanks__img">
-            <span class="vertical-centered"></span>
             <img src="img/thanks_img.png" alt="smile"/>
         </div>
 
         <h2 class="title">Спасибо!</h2>
-        <h3 class="title">Ваша заявка успешно принята</h3>
-        <p>Через некоторое время с вами свяжется<br />
-            наш менеджер</p>
-    </div>
+        <h3>Мы получили Вашу заявку и совсем скоро
+            Вам перезвоним!</h3>
 
 </div>
 
