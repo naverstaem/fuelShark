@@ -1,0 +1,604 @@
+// Normally mainpage styles 
+//+font('Conv_SegoePrintRegular', 'SegoePrintRegular')
+
+
+
+
+header
+  +clr
+  height: 108px
+  position: fixed
+  width: 100%
+  top: 0
+  bottom: auto
+  z-index: 999
+  background: #ffffff
+  +background-size(cover)
+
+
+
+  nav
+    @extend %in
+    padding-top: 35px
+    +clr
+    .logo
+      float: left
+      margin-right: 70px
+      margin-top: -20px
+
+    ul
+      float: left
+      font-size: 21px
+      display: inline-block
+      color: #282828
+      font-family: 'clear_sansregular'
+      li
+        display: inline-block
+        margin-right: 10px
+        padding-right: 15px
+        line-height: 1.2em
+        border-right: 1px solid #ebebeb
+        &:last-child
+          margin-right: 0
+          border-right: none
+        a
+          color: inherit
+          text-decoration: none
+          &:hover
+            color: #1e89db
+
+          &.is-active
+            color: #1e89db
+
+
+    .menu_contacts
+      float: right
+      width: 230px
+      line-height: 1.4em
+    .menu_phone
+      font-size: 27px
+      display: inline-block
+      float: right
+      position: relative
+      color: #282828
+      +intro
+
+    .menu_callMe
+      float: right
+      font-size: 16px
+      color: #282828
+      text-decoration: none
+      border-bottom: dotted 1px
+      font-family: 'neristhin'
+      &:hover
+        border-bottom: none
+
+.intro
+  background: url(../img/intro_bg.jpg)
+  +cover
+  height: 691px
+  margin-top: 108px
+  position: relative
+  +clr
+  +box
+  &__border-top
+    position: absolute
+    height: 0
+    border-top: 9px solid #1d89db
+    top: 0
+    width: 100%
+    left: 0
+    z-index: 1
+  &__border-bottom
+    position: absolute
+    height: 0
+    border-top: 9px solid #6bd3a7
+    bottom: 0
+    width: 100%
+    left: 0
+    z-index: 1
+  .intro_in
+    @extend %in
+
+  &__text
+    width: 480px
+    float: left
+    padding-top: 60px
+    h1
+      font-size: 55px
+      color: #ffffff
+      line-height: 1em
+      +intro
+    h2
+      color: #ffffff
+      font-size: 21.6px
+      text-transform: uppercase
+      font-family: 'jurademibold'
+      margin-top: 10px
+    ul
+      font-size: 20px
+      color: #ffffff
+      line-height: 1em
+      margin-top: 60px
+      li
+        width: 265px
+        position: relative
+        margin-left: 80px
+        border-bottom: 1px solid rgba(#fff, .31)
+        padding-bottom: 20px
+        padding-top: 15px
+        +csb
+        &:before
+          position: absolute
+          content: ""
+          top: 13px
+          left: -80px
+          +s(check)
+        &:last-child
+          border-bottom: none
+  &__form
+    position: relative
+    float: right
+    background: url(../img/form_bg.png)
+    width: 447px
+    height: 724px
+    z-index: 0
+    .form__img
+      width: 507px
+      height: 454px
+      margin-top: -60px
+      margin-left: -50px
+    .form__price
+      position: absolute
+      background: url(../img/price_bg.png) no-repeat
+      height: 104px
+      width: 104px
+      text-align: center
+      top: 40px
+      right: 60px
+      +intro
+      font-size: 18px
+      +box
+      padding-top: 15px
+      line-height: 1.4em
+      color: #ffffff
+      span
+        font-size: 29.6px
+
+
+
+
+.about
+  margin-top: 120px
+  +clr
+  .about_in
+    @extend %in
+    +clr
+  .about__img
+    float: left
+    width: 397px
+    height: 397px
+    +border-radius(50%)
+    +clr
+    img
+      display: block
+  h2
+    text-align: left
+    margin-bottom: 10px
+  .about__text
+    float: right
+    font-size: 18px
+    color: #333333
+    width: 520px
+    +cs
+    +clr
+    p
+      margin-bottom: 20px
+
+
+
+.functionality
+  margin-top: 100px
+  background: rgb(242,242,242)
+  padding-bottom: 70px
+  padding-top: 60px
+  .functionality_in
+    @extend %in
+  h3
+    margin-top: 15px
+    font-size: 20px
+    color: #1a1a1a
+    font-weight: normal
+    text-align: center
+    padding: 0 140px
+  &__item
+    margin-top: 40px
+    text-align: center
+    vertical-align: top
+    display: inline-block
+    width: 235px
+    +box
+    padding: 0 30px
+    border-right: 1px solid #dfdfdf
+    height: 150px
+    &:last-child
+      border-right: 0
+  &__img
+    display: inline-block
+    margin-bottom: 15px
+  p
+    +csb
+    font-size: 20px
+    color: #363636
+    line-height: 1.1em
+
+.how
+  +clr
+  clear: both
+  +box
+  margin-top: 100px
+  padding-bottom: 90px
+  +box-shadow(0 10px 45px -25px black)
+  .how_in
+    @extend %in
+    +clr
+    position: relative
+  &__action
+    margin-top: 50px
+    background: url(../img/how_img.png) no-repeat
+    top: 0
+    left: 0
+    width: 961px
+    height: 1090px
+    +clr
+    +box
+    ol
+      position: relative
+      counter-reset: myCounter
+      +cs
+      font-size: 17px
+      color: #333333
+      li
+        position: absolute
+        line-height: 1.5em
+        &:before
+          content: counter(myCounter) "."
+          counter-increment: myCounter
+          position: absolute
+          +intro
+          font-size: 71px
+          color: #ffffff
+        &.odd
+          width: 640px
+          margin-left: 200px
+          &:before
+            left: -143px
+            top: 42px
+          &.first
+            top: 15px
+          &.third
+            top: 480px
+            &:before
+              left: -149px
+              top: 57px
+          &.fifth
+            top: 950px
+            &:before
+              left: -149px
+              top: 57px
+        &.even
+          &:before
+            right: -171px
+            top: 35px
+          width: 690px
+          margin-left: 70px
+          &.second
+            top: 260px
+          &.fourth
+            top: 710px
+            &:before
+              right: -162px
+              top: 60px
+
+
+
+
+
+
+
+.features
+  padding-top: 70px
+  clear: both
+  +box-shadow(inset 0 -10px 45px -25px black)
+
+  .features_in
+    @extend %in
+    +clr
+    margin-top: 55px
+  .items
+    +clr
+    float: left
+    width: 260px
+    text-align: right
+    margin-left: -50px
+    margin-top: 10px
+    .item
+      position: relative
+      margin-bottom: 140px
+      &:after
+        position: absolute
+        content: ""
+        +s(ok-left)
+        top: -8px
+        right: -78px
+      h3
+        +intro
+        font-size: 16px
+        margin-bottom: 5px
+        color: #282828
+
+      &.item--center
+        margin-right: 60px
+
+
+
+  .items--right
+    +clr
+    float: right
+    text-align: left
+    margin-right: -20px
+    width: 220px
+    margin-top: 10px
+
+
+
+    .item
+      &:after
+        left: -78px
+        top: -8px
+        +s(ok-right)
+      &.item--center
+        margin-right: 0 !important
+        margin-left: 60px
+
+
+  .feature__img
+    width: 431px
+    height: 431px
+    +border-radius(50%)
+    float: left
+    margin-left: 57px
+    img
+      display: block
+
+
+
+.work
+  padding-bottom: 70px
+  padding-top: 110px
+  .work_in
+    @extend %in
+  h3
+    margin-top: 15px
+    font-size: 20px
+    color: #1a1a1a
+    font-weight: normal
+    text-align: center
+    padding: 0 140px
+  &__item
+    margin-top: 40px
+    text-align: center
+    vertical-align: top
+    display: inline-block
+    width: 235px
+    +box
+
+  &__img
+    display: inline-block
+    +border-radius(50%)
+    +background-clip(padding-box)
+    background: #f1765a
+    line-height: 100%
+    width: 116px
+    height: 116px
+    position: relative
+    margin-bottom: 15px
+    &.first
+      &:after
+        +s(work-ico1)
+    &.second
+      &:after
+        +s(work-ico2)
+    &.third
+      &:after
+        +s(work-ico3)
+    &.fourth
+      &:after
+        +s(work-ico4)
+    &:after
+      position: absolute
+      content: ''
+      left: 50%
+      top: 50%
+      +transform(translate(-50%, -50%))
+
+  p
+    +cs
+    font-size: 16px
+    color: #242424
+    line-height: 1.1em
+    border-right: 1px solid #dfdfdf
+    height: 72px
+    padding: 0 25px
+
+    &.last
+      border-right: 0
+
+.reviews
+  background: rgb(242,242,242)
+  padding: 75px 0
+  .reviews_in
+    @extend %in
+  &__item
+    width: 250px
+    text-align: center
+    vertical-align: top
+    display: inline-block
+    margin-right: 75px
+    margin-top: 40px
+    &:last-child
+      margin-right: 0
+
+  &__img
+    display: inline-block
+    width: 140px
+    height: 169px
+  &__text
+    p
+      +cs
+      font-size: 16px
+      color: #333333
+    h3
+      margin-top: 10px
+      +csb
+      font-size: 16px
+      color: #333333
+
+.buy
+  +clr
+  .buy_in
+    @extend %in
+    padding-top: 140px
+    +clr
+  .buy__item
+    width: 273px
+    height: 576px
+    +box
+    +border-radius(5px)
+    background: #ffffff
+    display: inline-block
+    margin-right: 60px
+    vertical-align: top
+    text-align: center
+    +border-radius(5px)
+    +background-clip(padding-box)
+    +box-shadow(0 4px 24px rgba(44,44,44,.19))
+    +background-image(linear-gradient(to bottom, #fff 0%, #fff 100%))
+    position: relative
+    &:before
+      position: absolute
+      content: ""
+      top: 0
+      left: 0
+      width: 100%
+      height: 0
+      border-top: solid 6px rgb(50,187,222)
+      +border-top-radius(5px)
+    &:last-child
+      margin-right: 0
+    .buy__img
+      width: 170px
+      height: 183px
+      display: inline-block
+      margin-bottom: 20px
+      margin-top: 45px
+
+    .item__caption
+      +clr
+      .item__name
+        +intro
+        color: #181818
+        font-size: 19px
+      .item__details
+        font-size: 17px
+        color: #333333
+      .item__price
+        @extend .item__name
+        font-size: 21px
+        margin-top: 15px
+    .item__form
+
+      margin-top: 15px
+      form
+        margin-top: 0
+      input
+        width: 222px
+        border: 1px solid rgba(204,204,204,.59)
+        +border-radius(3px)
+        background: #ffffff
+      .button
+        height: 46px
+        display: inline-block
+        font-size: 22.2px
+        padding: 0 49px
+
+
+.bottom
+  @extend .intro
+
+
+footer
+  @extend header
+  margin-top: 35px
+  position: relative
+.callback
+  width: 581px
+  height: 447px
+  background: url(../img/callback_bg.png) no-repeat
+  text-align: center
+  padding: 50px 40px
+  +box
+
+
+  h2
+  h3
+    margin-top: 20px
+    margin-bottom: 30px
+    padding: 0 30px
+    font-family: 'clear_sansregular'
+    text-transform: none
+    font-size: 17px
+    color: #000000
+
+  form
+    margin-top: 0
+    input
+      width: 302px
+      margin-bottom: 10px
+      border: 1px solid #d6d6d6
+      +border-radius(4px)
+      +background-clip(padding-box)
+      background-color: #fff
+
+    button
+      margin-top: 30px !important
+
+
+
+.thanks
+  text-align: center
+  width: 426px
+  height: 426px
+  background: url(../img/thanks_bg.png) no-repeat
+  .thanks__img
+    position: relative
+    +border-radius(50%)
+    +background-clip(padding-box)
+    width: 78px
+    height: 78px
+    display: inline-block
+    margin-top: 78px
+
+    img
+      vertical-align: middle
+  h2
+    font-size: 49px
+    line-height: 1em
+    margin-top: 40px
+
+  h3
+    font-size: 17px
+    font-weight: normal
+    color: #333333
+    margin-top: 30px
+    padding: 0 40px
